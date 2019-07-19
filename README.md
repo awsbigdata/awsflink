@@ -1,4 +1,4 @@
-# awsflink
+# awsflink (EMR 5.24.0)
 how to connect kinesis from flink in emr in java
 
 Building Flink-kinesis dependency 
