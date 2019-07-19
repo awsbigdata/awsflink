@@ -1,4 +1,4 @@
-package awsflink.com.awssupport.flink.kinesis;
+package com.awssupport.flink.kinesis;
 
 import org.apache.flink.api.common.serialization.SimpleStringSchema;
 import org.apache.flink.api.java.utils.ParameterTool;
@@ -26,7 +26,7 @@ public class ConsumeFromKinesis {
         //kinesisConsumerConfig.setProperty(ConsumerConfigConstants.AWS_SECRET_ACCESS_KEY, pt.getRequired("secretkey"));
 
         DataStream<String> kinesis = see.addSource(new FlinkKinesisConsumer<>(
-                "testflink",
+                pt.getRequired("streamname"),
                 new SimpleStringSchema(),
                 kinesisConsumerConfig));
 
