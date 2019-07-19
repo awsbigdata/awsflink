@@ -35,6 +35,6 @@ mvn install:install-file -Dfile=./flink-connector-kinesis_2.11-1.6-SNAPSHOT.jar 
  
  4.Run below command to consume kinesis 
  
- flink run -m yarn-cluster -yn 2 -ys 2 -c com.awssupport.flink.kinesis.ConsumeFromKinesis awsflinkFat.jar --region <regionName> -streamname <streamName>
+flink run -m yarn-cluster -yn 2 -ys 2 -c com.awssupport.flink.kinesis.ConsumeFromKinesis awsflinkFat.jar --region [regionName]  -streamname [KinesisStreamName]
  
  
